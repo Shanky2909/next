@@ -1,6 +1,4 @@
-import FeaturedPost from '../components/home-page/featured-posts';
-import Hero from '../components/home-page/hero';
-
+import AllPosts from '../../components/posts/all-posts';
 const DUMMY_POSTS = [
   {
     title: 'Getting Started with Next Js',
@@ -31,14 +29,8 @@ const DUMMY_POSTS = [
     slug: 'getting-started-with-nextJs3',
   },
 ];
+const AllBlogsCategory = () => {
+  return <AllPosts posts={DUMMY_POSTS} />;
+};
 
-function HomePage(props) {
-  return (
-    <div>
-      <Hero />
-      <FeaturedPost posts={DUMMY_POSTS} />
-    </div>
-  );
-}
-
-export default HomePage;
+export default AllBlogsCategory;
